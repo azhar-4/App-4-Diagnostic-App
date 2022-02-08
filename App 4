@@ -36,26 +36,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var flu_count = 0;
+        var covid_count = 0;
         
 	var total = 0; 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		//adds allergy count by 1 
-	    //cold count variable here is being added by one everytime coldAdd is called 
+        function fluAdd(){
+            flu_count = flu_count + 1;
+		//adds flu count by 1 
+	    //flu count variable here is being added by one everytime coldAdd is called 
 	    total++; 
-            //everytime coldAdd is used, total is added by 1 
-	<!-- function to count the number of answers that supports the user having allergies or a cold -->
+            //everytime fluAdd is used, total is added by 1 
+	<!-- function to count the number of answers that supports the user having the flu or covid -->
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-	    //cold count variable here is being added by one everytime coldAdd is called 
+        function covidAdd(){
+            covid_count = covid_count + 1;
+	    //covid count variable here is being added by one everytime covidAdd is called 
 	    total++;
-	    //everytime coldAdd is used, total is added by 1 
-	<!-- function to count the number of answers that supports the user having allergies or a cold -->
+	    //everytime covidAdd is used, total is added by 1 
+	<!-- function to count the number of answers that supports the user having the flu or covid -->
         }
 print total; 
   </script>
@@ -90,7 +90,7 @@ print total;
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have covid but wonder if it is the flu. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -100,13 +100,13 @@ print total;
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are you eyes watery or itchy?</h1> 
+		<h1>Are you having shortness of breath?</h1> 
 		Question #1
 		<!-- Asking the question and telling what buttons to push -->
 	</div>
 	
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#two" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
+	<a href="#two" onclick="fluAdd();" class="w3-btn w3-black"> No </a>
        <!-- The two buttons to choose from . -->
 	
 
@@ -116,13 +116,13 @@ print total;
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Did you lose your sense of smell and taste?</h1>
 		Question #2
 		<!-- Asking the question and telling what buttons to push -->
 	</div>
 	
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#three" onclick="alergyAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#three" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#three" onclick="fluAdd();" class="w3-btn w3-black"> No </a>
 	<!-- The two buttons to choose from . -->
 	
 	
@@ -133,13 +133,13 @@ print total;
 	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a sore throat?</h1>
+		<h1>Do you have diarrhea?</h1>
 		Question #3
 		<!-- Asking the question and telling what buttons to push -->
 	</div>
 	
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#four" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#four" onclick="covidAdd();" class="w3-btn w3-black"> No </a>
 	<!-- The two buttons to choose from . -->
 	
 
@@ -150,13 +150,13 @@ print total;
 
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Do you have nausea?</h1>
 		Question #4
 		<!-- Asking the question and telling what buttons to push -->
 	</div>
 	
-	<a href="#five" onclick="alergyAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#five" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#five" onclick="covidAdd();" class="w3-btn w3-black"> No </a>
 	<!-- The two buttons to choose from . -->
 
 	
@@ -166,13 +166,13 @@ print total;
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Have you been in direct contact with someone who's tested positive for covid in the past 10 days?</h1>
 		Question #5
 		<!-- Asking the question and telling what buttons to push -->
 	</div>
 	
-	<a href="#six" onclick="alergyAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#six" onclick="covidAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#six" onclick="fluAdd();" class="w3-btn w3-black"> No </a>
 	<!-- The two buttons to choose from . -->
 
 	
@@ -183,14 +183,14 @@ print total;
 
 <div class="page" id="six">
 <div class="w3-container w3-flat-carrot">
-	<h1>Are your symptoms seasonal or chronic?</h1>
+	<h1>Did you have abrupt symptoms after exposure (if you've known you've been exposed)?</h1>
 	Question #6
 	<!-- Asking the question and telling what buttons to push -->
 	
       </div>
 	
-	<a href="#seven" onclick="alergyAdd();" class="w3-btn w3-black"> Yes </a>
-        <a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+	<a href="#seven" onclick="fluAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#seven" onclick="covidAdd();" class="w3-btn w3-black"> No </a>
 	<!-- The two buttons to choose from . -->
 
 	
@@ -199,7 +199,7 @@ print total;
 
 </div>
 
-Disagnostic idea - Flu symptoms vs Cold symptoms
+Disagnostic idea - Flu symptoms vs Covid symptoms
 
 
 </div> class="page" id="seven">
