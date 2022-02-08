@@ -211,3 +211,11 @@ Disagnostic idea - Flu symptoms vs Covid symptoms
 </body>
 </html>
 
+<style>
+       	img, object{
+            	max-height:90%;
+        		max-width:90%;
+        	}
+</style>
+
+
